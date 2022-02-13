@@ -1,0 +1,153 @@
+:root {
+  --primary-color: #f9c74f;
+  --secondary-color: #003566;
+}
+
+.logo:hover {
+  color: #45659e;
+}
+
+.recipe-title {
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #000000;
+}
+
+.sloganTitle,
+footer {
+  font-family: 'Caveat', cursive;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #000000;
+}
+
+.sloganTitle:hover {
+  color: #003566;
+}
+
+.sloganTitle1 {
+  color: #ffffff;
+  font-size: 18px;
+  text-shadow: 1px 1px #000000;
+  margin-left: 180px;
+}
+
+.titleIcon {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bolder;
+  text-shadow: 1px 1px #003566;
+  /* text-shadow: 2px 2px #ffffff;*/
+}
+
+.body-home {
+  min-height: 100vh;
+  padding-bottom: 10px;
+  background: url('./img/showcase3.jpg') no-repeat center center/cover;
+}
+
+.banner,
+footer {
+  opacity: 0.7;
+  color: #003566;
+  text-shadow: 2px 2px #ffffff;
+}
+
+.body-about {
+  height: 100vh;
+  background: url('./img/body-about2.jpg') no-repeat center center/cover;
+}
+
+.myNavbar {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  opacity: 0.4;
+}
+
+#navbarAside {
+  width: 200px;
+  height: 100vh;
+  opacity: 0.7;
+}
+
+.content {
+  padding-left: 220px;
+}
+
+.bannerMessages {
+  height: 30%;
+  border: solid 1px white;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+a,
+.titleForm {
+  color: var(--secondary-color);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+}
+
+.aboutText {
+  padding-right: 30px;
+  padding-left: 30px;
+  width: 660px;
+}
+
+.bg-btn {
+  background-color: var(--secondary-color);
+}
+
+.plusBtn {
+  color: var(--secondary-color);
+}
+
+.recipe-favorite {
+  color: #45659e;
+}
+
+/*md*/
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  /* Grid */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+/*xl*/
+@media screen and (min-width: 769px) {
+  /* Grid */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+
+
+input,
+textarea,
+select {
+  border: 2px solid var(--primary-color) !important;
+}
+
+.custom-input {
+  border: 2px solid var(--primary-color) !important;
+}
+
+.custom-input::after {
+  background-color: var(--primary-color) !important;
+  color: #ffffff;
+}
+
+.new-line {
+  white-space: pre-line;
+}
+
+.recipeName {
+  font-size: 41px;
+}
