@@ -18,6 +18,6 @@ app.use('/api/ingredients', require('./routes/ingredients'));
 app.use('/api/recipeIngredients', require('./routes/recipeIngredients'));
 app.use('/api/mesureUnity', require('./routes/mesureUnity'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3333;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
