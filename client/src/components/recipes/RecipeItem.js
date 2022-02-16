@@ -8,8 +8,8 @@ const RecipeItem = ({ recipe }) => {
 
   let history = useHistory();
 
-  const { deleteRecipe, setCurrent } = recipeContext;
-
+  const { deleteRecipe, setCurrent, updateRecipe } = recipeContext; 
+  
   const onDelete = (e) => {
     deleteRecipe(e.target.value);
   };
@@ -24,6 +24,14 @@ const RecipeItem = ({ recipe }) => {
     history.push('/editRecipe');
   };
 
+  const setFavorite = () => {  
+    let content = {
+      ...recipe,
+      favorite: !recipe.favorite,
+    }
+    updateRecipe(content);
+  };
+
   return (
     <Fragment>
       <div className='card mb-2 mb-md-0'>
@@ -34,10 +42,16 @@ const RecipeItem = ({ recipe }) => {
         </div>
         <div className='text-right'>
           {recipe.favorite === true ? (
-            <i className='fad fa-hat-chef fa-2x recipe-favorite mr-3'></i>
-          ) : (
-            <i className='fad fa-hat-chef fa-2x text-muted mr-3'></i>
-          )}
+              <i
+                className='fad fa-hat-chef fa-2x recipe-favorite mr-3'
+                onClick={() => setFavorite()}
+              ></i>
+            ) : (
+              <i
+                className='fad fa-hat-chef fa-2x text-muted mr-3'
+                onClick={() => setFavorite()}
+              ></i>
+            )}
         </div>
         <div className='d-flex align-items-center bg-light py-1'>
           <button

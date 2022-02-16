@@ -87,10 +87,9 @@ const RecipeState = (props) => {
       },
     };
 
-    try {
-      console.log("NO LOG",recipe)
+    try { 
       const res = await axios.put(`/api/recipe/${recipe._id}`, recipe, config);
-
+ 
       // await axios.delete(`/api/recipeIngredients/${recipe._id}`);
 
       // recipe.ingredients.map(ingredient => axios.post('/api/recipeIngredients', ingredient, config));

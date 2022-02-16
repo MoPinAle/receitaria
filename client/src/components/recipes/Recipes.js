@@ -16,6 +16,7 @@ const Recipes = () => {
     // eslint-disable-next-line
   }, [recipes]);
 
+
   return (
     <Fragment>
       <div className='container content pt-4'>

@@ -17,23 +17,22 @@ const RecipeDetail = (props) => {
     prepareMode: '',
     author: '',
     serves: '',
-    favorite: null,
+    favorite: false
   });
   useEffect(() => {
-    if (current !== null && detail.favorite === null) {
+    if (current !== null && !detail.favorite) {
       setDetail(current);
     }
     // eslint-disable-next-line
   }, []);
 
-  const setFavorite = () => {
-    console.log("Antes",detail)
-    setDetail((prevState) => ({
-      ...prevState,
-      favorite: !prevState.favorite,
-    }));
-    console.log("depois",detail)
-    updateRecipe(detail);
+  const setFavorite = () => { 
+    let content = {
+      ...detail,
+      favorite: !detail.favorite,
+    }
+    setDetail(content); 
+    updateRecipe(content);
   };
 
   return (

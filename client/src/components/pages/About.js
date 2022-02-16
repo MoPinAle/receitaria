@@ -2,17 +2,17 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className='content text-center text-white pt-4 d-flex align-self-center justify-content-center'>
-      <div className='bannerMessages p-md-3 w-50 mt-5'>
+    <div className='content text-center text-white pt-4 d-flex align-self-center justify-content-center mr-3'>
+      <div className='bannerMessages w-75 pt-2 p-3 mt-5'>
         <h1 className='banner mx-auto'>About</h1>
         <p>
-          O Projeto <span className='titleIcon'>Receitaria</span> nasceu do
-          intuito de externar os conhecimentos que tenho adquirido ao longo dos
-          dias. Tem sido um grande desafio e tenho gostado muito de cada
-          detalhe. Perceber a minha evolução é algo que me impulsiona a
-          continuar e seguir aprendendo mais e mais!
+          <span className='titleIcon'>Receitaria</span> is a Project which I 
+          decided to create to externalize the knowledge I have acquired so far. 
+          It was a big challenge and I am so proud of the results I achieved.
         </p>
-        <p>React nos permite chegar mais longe </p>
+        <p>
+          React and Bootstrap were the Frameworks I chose to build these Application and, to persist the data, I used MongoDB. Hope you enjoy it!
+        </p>
       </div>
     </div>
   );

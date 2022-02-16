@@ -121,8 +121,9 @@ router.put('/:id', async (req, res) => {
   if (author) recipeFields.author = author;
   if (ingredients) recipeFields.ingredients = ingredients;
   if (serves) recipeFields.serves = serves;
-  if (favorite) recipeFields.favorite = favorite;
-
+  
+  recipeFields.favorite = favorite;
+  
   try {
     let recipe = await Recipe.findById(req.params.id);
 
@@ -132,8 +133,7 @@ router.put('/:id', async (req, res) => {
       req.params.id,
       { $set: recipeFields },
       { new: true }
-    );
-
+    ); 
     res.json(recipe);
   } catch (err) {
     console.error(err.message);
