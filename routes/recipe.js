@@ -148,7 +148,7 @@ router.delete('/:id', async (req, res) => {
   try {
     let recipe = await Recipe.findById(req.params.id);
 
-    if (!recipe) return res.status(404).json({ msg: 'Recipe nt found' });
+    if (!recipe) return res.status(404).json({ msg: 'Recipe not found' });
 
     await Recipe.findByIdAndRemove(req.params.id);
 
